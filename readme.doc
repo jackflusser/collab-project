@@ -1,0 +1,12 @@
+Fast-Forward Merge Explanation
+
+Both merges were fast-forward merges because the develop branch didn’t change while the other branches were being worked on. This meant that Git could simply move the develop branch pointer forward to include all the new commits without creating a separate merge commit. In other words, the branches never diverged, so the history stayed in a straight line.
+
+
+Conflict Scenario
+
+A merge conflict occurred when both the develop branch and the conflict_branch changed the same line in the same file. Git couldn’t automatically decide which version to keep, so I had to manually edit the file on develop, remove the conflict markers, and commit the resolved version.
+
+No-Conflict Scenario
+
+A merge didn’t cause any conflict when the two branches changed different parts of the same file. Because the edits didn’t overlap, Git was able to automatically combine both changes without asking for manual resolution.
